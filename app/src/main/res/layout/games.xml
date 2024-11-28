@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mandarina"
+    tools:context=".games">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Base.Theme.MiTema" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageAngryBirds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/divider1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/games_angrybirds" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAngryBirds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:buttonTint="@color/black"
+                android:text="@string/angry_birds"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/divider1"
+                app:layout_constraintStart_toEndOf="@id/imageAngryBirds"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/imageDragonFly"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageAngryBirds" />
+
+            <ImageView
+                android:id="@+id/imageDragonFly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1"
+                app:srcCompat="@drawable/games_dragonfly" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDragonFly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/dragon_fly"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/divider2"
+                app:layout_constraintStart_toEndOf="@id/imageDragonFly"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/imageHillClimbingRacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageDragonFly" />
+
+            <ImageView
+                android:id="@+id/imageHillClimbingRacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                app:srcCompat="@drawable/games_hillclimbingracing" />
+
+            <CheckBox
+                android:id="@+id/checkBoxHillClimbingRacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/hill_climbing_racing"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/divider3"
+                app:layout_constraintStart_toEndOf="@id/imageHillClimbingRacing"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/imageRadiantDefense"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageHillClimbingRacing" />
+
+            <ImageView
+                android:id="@+id/imageRadiantDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3"
+                app:srcCompat="@drawable/games_radiantdefense" />
+
+            <CheckBox
+                android:id="@+id/checkBoxRadiantDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/radiant_defense"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/divider4"
+                app:layout_constraintStart_toEndOf="@id/imageRadiantDefense"
+                app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/imagePocketSoccer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageRadiantDefense" />
+
+            <ImageView
+                android:id="@+id/imagePocketSoccer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider4"
+                app:srcCompat="@drawable/games_pocketsoccer" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPocketSoccer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/pocket_soccer"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/divider5"
+                app:layout_constraintStart_toEndOf="@id/imagePocketSoccer"
+                app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/imageNinjaJump"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagePocketSoccer" />
+
+            <ImageView
+                android:id="@+id/imageNinjaJump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider5"
+                app:srcCompat="@drawable/games_ninjump" />
+
+            <CheckBox
+                android:id="@+id/checkBoxNinjaJump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/ninja_jump"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/divider6"
+                app:layout_constraintStart_toEndOf="@id/imageNinjaJump"
+                app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/imageAirControl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageNinjaJump" />
+
+            <ImageView
+                android:id="@+id/imageAirControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider6"
+                app:srcCompat="@drawable/games_aircontrol" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAirControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/air_control"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageAirControl"
+                app:layout_constraintTop_toBottomOf="@id/divider6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        app:backgroundTint="@color/rojoBoton"
+        app:backgroundTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/fab_description"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
+</androidx.constraintlayout.widget.ConstraintLayout>
